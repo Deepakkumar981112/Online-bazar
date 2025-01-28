@@ -5,8 +5,8 @@ const {isAdminAuthenticated} = require("../Middlewares/Auth")
 const categoryRoute = express.Router()
 
 
-categoryRoute.get("/category",viewAllCategory)
-categoryRoute.get("/category/:id",viewOneCategory)
+categoryRoute.get("/category",isAdminAuthenticated,viewAllCategory)
+categoryRoute.get("/category/:id",isAdminAuthenticated,viewOneCategory)
 categoryRoute.post("/category",CreateCategory)
 categoryRoute.put("/category/:id",updateCategory)
 categoryRoute.delete("/category/:id",deleteCategory)

@@ -4,7 +4,7 @@ const {isAdminAuthenticated} = require("../Middlewares/Auth")
 
 const subCategoryRoute = express.Router()
 
-subCategoryRoute.get("/subcategory",isAdminAuthenticated,viewAllsubCategory)
+subCategoryRoute.get("/subcategory",viewAllsubCategory)
 subCategoryRoute.get("/subcategory/:id",isAdminAuthenticated,viewOneSubCategory)
 subCategoryRoute.post("/subcategory",CreateSubcategory)
 subCategoryRoute.put("/subcategory/:id",updateSubcategory)
