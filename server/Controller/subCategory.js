@@ -146,8 +146,4 @@ const updateSubcategory = catchAsyncError(async (req, res, next) => {
   });
 });
 
-
-
-
-
 module.exports = { CreateSubcategory, viewAllsubCategory, viewOneSubCategory, deleteSubcategory, updateSubcategory }
